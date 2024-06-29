@@ -1,5 +1,6 @@
-import { CardProps } from '@src/utils/interfaces';
 import clsx from 'clsx';
+
+import { CardProps } from '@/utils/interfaces';
 
 export const Card = ({ title, text, link }: CardProps) => (
     <div

@@ -1,13 +1,14 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Button } from '@src/components/Button';
-import { ButtonForm } from '@src/components/posts/ButtonForm';
-import TextareaField from '@src/components/posts/TextareaField';
-import TextField from '@src/components/posts/TextField';
-import { createPost } from '@src/services/posts';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
+import { FieldValues, useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import { z } from 'zod';
+
+import { Button } from '@/components/Button';
+import { ButtonForm } from '@/components/posts/ButtonForm';
+import TextareaField from '@/components/posts/TextareaField';
+import TextField from '@/components/posts/TextField';
+import { createPost } from '@/services/posts';
 
 export interface FormValues {
     title: string;

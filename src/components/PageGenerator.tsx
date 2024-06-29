@@ -1,7 +1,8 @@
-import { ComponentProps } from '@src/componentProps';
-import * as Components from '@src/componentProps';
-import LayoutSection from '@src/components/LayoutSection';
 import { Route, Routes } from 'react-router-dom';
+
+import { ComponentProps } from '@/componentProps';
+import * as Components from '@/componentProps';
+import LayoutSection from '@/components/LayoutSection';
 
 export interface LayoutProps {
     backgroundColor?: string;

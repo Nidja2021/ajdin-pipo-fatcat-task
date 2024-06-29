@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LayoutProps } from '@src/components/PageGenerator';
+import { LayoutProps } from '@/components/PageGenerator';
 
 export interface LayoutSectionProps extends LayoutProps {
     children: React.ReactNode;

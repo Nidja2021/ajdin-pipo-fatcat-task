@@ -1,5 +1,6 @@
-import { Card } from '@src/components/landing/Card';
 import clsx from 'clsx';
+
+import { Card } from '@/components/landing/Card';
 
 // eslint-disable-next-line no-undef
 const vscodeProjectLink = `vscode://file/${__CWD__}`;

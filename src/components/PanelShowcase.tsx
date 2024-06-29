@@ -1,5 +1,12 @@
-import { PanelShowcaseProps } from '@src/utils/interfacese';
 import clsx from 'clsx';
+
+interface PanelShowcaseProps {
+    items: {
+        title: string;
+        description: string;
+        image?: string;
+    }[];
+}
 
 export const PanelShowcase = ({ items }: PanelShowcaseProps) => {
     return (

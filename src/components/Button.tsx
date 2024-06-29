@@ -1,5 +1,11 @@
-import { ButtonProps } from '@src/utils/interfaces';
 import clsx from 'clsx';
+
+interface ButtonProps {
+    children: React.ReactNode;
+    onClick?: () => void;
+    className?: string;
+    disabled?: boolean;
+}
 
 export const Button = ({ children, onClick, className }: ButtonProps) => {
     const buttonStyle = clsx(

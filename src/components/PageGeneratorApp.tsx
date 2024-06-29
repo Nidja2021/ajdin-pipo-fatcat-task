@@ -1,5 +1,6 @@
-import PageGenerator from '@src/components/PageGenerator';
 import clsx from 'clsx';
+
+import PageGenerator, { PageProps } from '@/components/PageGenerator';
 
 // import PageGenerator, { PageProps } from '@/components/PageGenerator';
 
@@ -9,7 +10,7 @@ const setLayoutBackgroundColor = (
     return clsx(color);
 };
 
-export const data: PageProps[] = [
+const data: PageProps[] = [
     {
         type: 'layoutSection',
         props: { backgroundColor: setLayoutBackgroundColor('transparent') },

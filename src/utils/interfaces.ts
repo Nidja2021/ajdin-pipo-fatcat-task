@@ -29,28 +29,6 @@ export interface HeroProps {
     image: string;
 }
 
-export interface Item {
-    title: string;
-    description: string;
-    image?: string;
-}
-
-export interface ItemsShowcaseProps {
-    items: Item[];
-}
-
-export interface PanelShowcaseProps {
-    items: Item[];
-}
-
-export interface Image {
-    image: string;
-}
-
-export interface TrustBarProps {
-    images: Image[];
-}
-
 export interface User {
     id: number;
     name: string;
