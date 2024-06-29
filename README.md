@@ -142,3 +142,18 @@ You will have to complete all of these for your task to be considered done.
 
 
 ### Note: You can override this document
+#### After cloning this project, open it and open terminal. Run command 'npm install' to install all depedencies. After that you can run command "npm run dev" to start project.
+
+#### This projects is written in Typescript, and all config is with Typescript. 
+
+#### Some new packages are added such as React Query, React Router Dom, Zod...
+
+#### First task is to convert all JSX files to TSX. It's done. Before that I had to setup tsconfig.json and add some addionally options.
+
+#### Second task is to create a component which represent a list of users calling API https://jsonplaceholder.typicode.com/users. 
+
+#### Third task is to create a form generator component. Before I started to work on this task, I needed to install some libraries such React Query, React Hook Form, Zod. The form contains two fields (title, body). For creating form I used React Hook Form. These fields I created as custom components, and they can be used as reusable components. For mutate date I used mutation from React Query. It allows me to revalidate path (You can check network to see does mutation works correctly). And for validation I used Zod. Created schema and type for form fields.
+
+#### Fourth task is to create a page generator component. This approach allows us to manipulate with layouts all pages. We can easily setup layout just in one place for all layouts.
+
+#### For calling apis, I created folder "services" and used "fetch" function. In this project I was only using GET and POST methods.
