@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import { Card } from './Card.jsx';
+import { Card } from '@/components/landing/Card';
 
 // eslint-disable-next-line no-undef
 const vscodeProjectLink = `vscode://file/${__CWD__}`;
@@ -28,7 +28,11 @@ const cards = [
     },
 ];
 
-export const Landing = () => {
+export interface LandingProps {
+    title: string;
+}
+
+export const Landing = (props: LandingProps) => {
     return (
         <section
             className={clsx(

@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "target": "ES5",
+        "module": "CommonJS",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+        },
+        // "allowImportingTsExtensions": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "noImplicitAny": true,
+        "strict": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+    }   
+}
