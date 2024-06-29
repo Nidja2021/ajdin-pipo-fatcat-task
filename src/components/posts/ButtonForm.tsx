@@ -1,6 +1,5 @@
+import { ButtonProps } from '@src/utils/interfaces';
 import clsx from 'clsx';
-
-import { ButtonProps } from '@/utils/interfaces';
 
 export const ButtonForm = ({
     children,

@@ -1,8 +1,8 @@
-import ErrorPage from '@/components/ErrorPage';
-import { UsersSkeleton } from '@/components/LoadingIndicator';
-import UserCard from '@/components/users/UserCard';
-import { useUsers } from '@/custom-hooks/queries';
-import { UserResponse } from '@/utils/interfaces';
+import ErrorPage from '@src/components/ErrorPage';
+import { UsersSkeleton } from '@src/components/LoadingIndicator';
+import UserCard from '@src/components/users/UserCard';
+import { useUsers } from '@src/custom-hooks/queries';
+import { UserResponse } from '@src/utils/interfaces';
 
 export interface UsersProps {
     title: string;

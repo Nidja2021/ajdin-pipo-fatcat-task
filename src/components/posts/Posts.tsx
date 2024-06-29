@@ -1,9 +1,9 @@
-import ErrorPage from '@/components/ErrorPage';
-import { PostsSkeleton } from '@/components/LoadingIndicator';
-import PostCard from '@/components/posts/PostCard';
-import PostForm from '@/components/posts/PostForm';
-import { usePosts } from '@/custom-hooks/queries';
-import { PostResponse } from '@/services/posts';
+import ErrorPage from '@src/components/ErrorPage';
+import { PostsSkeleton } from '@src/components/LoadingIndicator';
+import PostCard from '@src/components/posts/PostCard';
+import PostForm from '@src/components/posts/PostForm';
+import { usePosts } from '@src/custom-hooks/queries';
+import { PostResponse } from '@src/services/posts';
 
 export interface PostsProps {
     title: string;

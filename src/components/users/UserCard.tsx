@@ -1,6 +1,5 @@
+import { UserResponse } from '@src/utils/interfaces';
 import clsx from 'clsx';
-
-import { UserResponse } from '@/utils/interfaces';
 
 export interface UserCardProps {
     user: Partial<UserResponse> | undefined;

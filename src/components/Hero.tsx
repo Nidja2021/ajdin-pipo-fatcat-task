@@ -1,4 +1,4 @@
-import { HeroProps } from '@/utils/interfacese';
+import { HeroProps } from '@src/utils/interfacese';
 
 export const Hero = ({ title, image }: HeroProps) => {
     return (

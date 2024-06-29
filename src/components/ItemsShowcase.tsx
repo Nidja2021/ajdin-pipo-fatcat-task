@@ -1,4 +1,4 @@
-import { ItemsShowcaseProps } from '@/utils/interfacese';
+import { ItemsShowcaseProps } from '@src/utils/interfacese';
 
 export const ItemsShowcase = ({ items }: ItemsShowcaseProps) => {
     return (

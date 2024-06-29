@@ -1,7 +1,6 @@
+import { Button } from '@src/components/Button';
+import { CardsProps } from '@src/utils/interfacese';
 import clsx from 'clsx';
-
-import { Button } from '@/components/Button';
-import { CardsProps } from '@/utils/interfacese';
 
 export const Cards = ({ cards }: CardsProps) => {
     return (

@@ -1,6 +1,7 @@
+import PageGenerator from '@src/components/PageGenerator';
 import clsx from 'clsx';
 
-import PageGenerator, { PageProps } from '@/components/PageGenerator';
+// import PageGenerator, { PageProps } from '@/components/PageGenerator';
 
 const setLayoutBackgroundColor = (
     color: 'orange' | 'blue' | 'yellow' | 'transparent'
