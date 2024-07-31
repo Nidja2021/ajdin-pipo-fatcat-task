@@ -1,47 +1,80 @@
-import { Route, Routes } from 'react-router-dom';
+import React from 'react';
 
-import { ComponentProps } from '@/componentProps';
-import * as Components from '@/componentProps';
-import LayoutSection from '@/components/LayoutSection';
+import { Hero } from '@/components/Hero';
+import { ItemsShowcase } from '@/components/ItemsShowcase';
+import { PanelShowcase } from '@/components/PanelShowcase';
+import { TrustBar } from '@/components/TrustBar';
 
-export interface LayoutProps {
-    backgroundColor?: string;
-}
+export type ComponentProps = {
+    type: string;
+    props: object;
+};
 
-export interface PageProps {
-    type: 'layoutSection';
-    props: LayoutProps;
+export type SectionProps = {
+    type: string;
     components: ComponentProps[];
-}
+    props: React.CSSProperties;
+};
 
-interface PageGeneratorProps {
-    data: PageProps[];
-}
+export type PageGeneratorProps = {
+    sections: SectionProps[];
+};
 
-export default function PageGenerator({ data }: PageGeneratorProps) {
+export type componentMapProps = {
+    [key: string]: React.ElementType;
+};
+
+const componentMap: componentMapProps = {
+    hero: Hero,
+    panelShowcase: PanelShowcase,
+    itemsShowcase: ItemsShowcase,
+    trustBar: TrustBar,
+};
+
+const renderComponent = (component: ComponentProps) => {
+    const Component = componentMap[component.type];
+
+    if (!Component) {
+        return null;
+    }
+    return <Component key={component.type} {...component.props} />;
+};
+
+export const renderSection = (section: SectionProps) => {
+    switch (section.type) {
+        case 'fullWidth':
+            return (
+                <div key={section.type} style={{ ...section.props }}>
+                    {section.components.map(renderComponent)}
+                </div>
+            );
+        case 'twoColumn':
+            return (
+                <div
+                    key={section.type}
+                    style={{ display: 'flex', ...section.props }}
+                >
+                    <div style={{ flex: 1 }}>
+                        {section.components
+                            .slice(0, Math.ceil(section.components.length / 2))
+                            .map(renderComponent)}
+                    </div>
+                    <div style={{ flex: 1 }}>
+                        {section.components
+                            .slice(Math.ceil(section.components.length / 2))
+                            .map(renderComponent)}
+                    </div>
+                </div>
+            );
+        default:
+            return null;
+    }
+};
+
+export default function PageGenerator({ sections }: PageGeneratorProps) {
     return (
         <div>
-            {data.map((layout, index) => {
-                // const Layout = Components[layout.type];
-                return (
-                    <LayoutSection key={index} {...layout.props}>
-                        <Routes>
-                            {layout.components.map((component, index) => {
-                                const Component = Components[component.type];
-                                return (
-                                    <Route
-                                        key={index}
-                                        path={component.path}
-                                        element={
-                                            <Component {...component.props} />
-                                        }
-                                    />
-                                );
-                            })}
-                        </Routes>
-                    </LayoutSection>
-                );
-            })}
+            <div>{sections.map(renderSection)}</div>
         </div>
     );
 }

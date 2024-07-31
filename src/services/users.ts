@@ -2,7 +2,7 @@ import { UserResponse } from '@/utils/interfaces';
 
 interface ApiResponse {
     status: 'success' | 'error';
-    data?: Partial<UserResponse[]>;
+    data?: UserResponse[];
     message?: string;
 }
 

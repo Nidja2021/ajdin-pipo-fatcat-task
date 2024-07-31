@@ -1,4 +1,4 @@
-interface ItemsShowcaseProps {
+export interface ItemsShowcaseProps {
     items: {
         title: string;
         description: string;

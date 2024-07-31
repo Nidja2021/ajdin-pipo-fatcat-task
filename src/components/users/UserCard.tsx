@@ -11,7 +11,7 @@ export default function UserCard({ user }: UserCardProps) {
     return (
         <div>
             {user && (
-                <div className="w-36 h-auto flex flex-col gap-4 border border-gray60 rounded-md py-5 px-4 md:w-64">
+                <div className="w-36 h-56 flex flex-col gap-4 border border-gray60 rounded-md py-5 px-4 md:w-64">
                     <h5 className="text-sm">
                         <span className={labelStyle}>Name:</span> {user?.name}
                     </h5>

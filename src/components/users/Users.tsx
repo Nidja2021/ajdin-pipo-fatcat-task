@@ -26,11 +26,9 @@ export default function Users(props: UsersProps) {
             </h1>
             <div className="h-full px-4 py-6 flex flex-col gap-4 md:flex-row md:flex-wrap lg:px-8 ">
                 {users &&
-                    users.data?.map(
-                        (user: Partial<UserResponse> | undefined) => (
-                            <UserCard key={user?.id} user={user} />
-                        )
-                    )}
+                    users.data?.map((user: UserResponse | undefined) => (
+                        <UserCard key={user?.id} user={user} />
+                    ))}
             </div>
         </div>
     );
